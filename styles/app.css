@@ -1,0 +1,39 @@
+/* 全局：全龄可读（偏大字号、柔和对比、统一间距） */
+page {
+	--c-bg-top: #fff8ee;
+	--c-bg-mid: #faf7f0;
+	--c-bg-bottom: #efe4d6;
+	--c-text: #2b241c;
+	--c-text-2: #5c4f42;
+	--c-text-3: #8a7a66;
+	--c-brand: #6b4e2e;
+	--c-brand-2: #8b6f47;
+	--c-line: rgba(107, 78, 46, 0.12);
+	--r-card: 22rpx;
+	--shadow-1: 0 12rpx 40rpx rgba(45, 32, 18, 0.08);
+	background-color: var(--c-bg-mid);
+	color: var(--c-text);
+	font-size: 30rpx;
+	line-height: 1.55;
+}
+
+.page-bg {
+	min-height: 100vh;
+	background: linear-gradient(
+		180deg,
+		var(--c-bg-top) 0%,
+		var(--c-bg-mid) 45%,
+		var(--c-bg-bottom) 100%
+	);
+}
+
+.page-pad--tab {
+	padding-bottom: calc(140rpx + env(safe-area-inset-bottom));
+}
+
+.card-surface {
+	background: rgba(255, 255, 255, 0.92);
+	border: 1rpx solid var(--c-line);
+	border-radius: var(--r-card);
+	box-shadow: var(--shadow-1);
+}

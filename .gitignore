@@ -1,0 +1,22 @@
+# 依赖与构建产物
+node_modules/
+unpackage/dist/
+unpackage/cache/
+
+# 日志与本地配置
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.hbuilderx/
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 私密配置（若有）
+*private.config.json

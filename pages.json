@@ -1,0 +1,101 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^ad-slot$": "@/components/ad-slot/ad-slot.vue"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "素盒六爻卜卦",
+				"navigationStyle": "default",
+				"backgroundColor": "#faf7f0"
+			}
+		},
+		{
+			"path": "pages/gua-list/gua-list",
+			"style": {
+				"navigationBarTitleText": "六十四卦",
+				"backgroundColor": "#faf7f0"
+			}
+		},
+		{
+			"path": "pages/gua-detail/gua-detail",
+			"style": {
+				"navigationBarTitleText": "卦象解读",
+				"backgroundColor": "#faf7f0"
+			}
+		},
+		{
+			"path": "pages/shake/shake",
+			"style": {
+				"navigationBarTitleText": "摇卦",
+				"backgroundColor": "#faf7f0"
+			}
+		},
+		{
+			"path": "pages/result/result",
+			"style": {
+				"navigationBarTitleText": "卦象参考",
+				"backgroundColor": "#faf7f0"
+			}
+		},
+		{
+			"path": "pages/records/records",
+			"style": {
+				"navigationBarTitleText": "卦象记录",
+				"backgroundColor": "#faf7f0"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"backgroundColor": "#faf7f0"
+			}
+		},
+		{
+			"path": "pages/privacy/privacy",
+			"style": {
+				"navigationBarTitleText": "隐私说明",
+				"backgroundColor": "#faf7f0"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#8a7a66",
+		"selectedColor": "#6b4e2e",
+		"borderStyle": "black",
+		"backgroundColor": "#fffaf3",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "素盒",
+				"iconPath": "static/tab/home.png",
+				"selectedIconPath": "static/tab/home-active.png"
+			},
+			{
+				"pagePath": "pages/records/records",
+				"text": "记录",
+				"iconPath": "static/tab/records.png",
+				"selectedIconPath": "static/tab/records-active.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "static/tab/mine.png",
+				"selectedIconPath": "static/tab/mine-active.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "素盒六爻",
+		"navigationBarBackgroundColor": "#fff8ee",
+		"backgroundColor": "#faf7f0",
+		"backgroundTextStyle": "dark"
+	},
+	"uniIdRouter": {}
+}
