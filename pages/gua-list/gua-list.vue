@@ -24,6 +24,9 @@
 <script setup>
 import { computed } from 'vue'
 import { HEXAGRAM_NAMES, HEXAGRAM_MNEMONICS } from '@/data/hexagram-data.js'
+import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+
+useMpWeixinShare({ path: '/pages/gua-list/gua-list' })
 
 const names = HEXAGRAM_NAMES
 const mnemonics = HEXAGRAM_MNEMONICS

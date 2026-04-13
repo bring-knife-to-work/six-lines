@@ -53,6 +53,9 @@ import { ref } from 'vue'
 import { HOME_TOOL_ONE_LINE } from '@/config/app.js'
 import { SHAKE_THEMES } from '@/config/shake-themes.js'
 import { getStoredThemeId, setStoredThemeId } from '@/utils/shake-theme.js'
+import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+
+useMpWeixinShare({ path: '/pages/index/index' })
 
 const toolOneLine = HOME_TOOL_ONE_LINE
 const themes = SHAKE_THEMES

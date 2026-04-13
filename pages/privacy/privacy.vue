@@ -17,6 +17,9 @@
 
 <script setup>
 import { RECORD_FILING_TEXT, PRIVACY_SUMMARY_TEXT } from '@/config/app.js'
+import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+
+useMpWeixinShare({ path: '/pages/privacy/privacy' })
 
 const filing = RECORD_FILING_TEXT
 const privacy = PRIVACY_SUMMARY_TEXT

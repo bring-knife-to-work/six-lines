@@ -71,10 +71,14 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
+import { APP_NAME } from '@/config/app.js'
 import { tossOnce, buildSession } from '@/utils/i-ching.js'
 import { saveSession, clearSession } from '@/utils/storage.js'
 import { getStoredTheme, resolveThemeImage } from '@/utils/shake-theme.js'
 import { themeFaceImageSrc } from '@/utils/shake-face-map.js'
+import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+
+useMpWeixinShare({ title: `摇卦 · ${APP_NAME}`, path: '/pages/shake/shake' })
 
 /** 与 .coin-axis--run 动画时长一致（略长于 0.82s，含错开延迟） */
 const SHAKE_MS = 880

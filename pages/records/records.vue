@@ -37,6 +37,9 @@ import { ref } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
 import { loadRecords, removeRecord, clearAllRecords } from '@/utils/storage.js'
 import { getHexagramMnemonic } from '@/data/hexagram-data.js'
+import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+
+useMpWeixinShare({ path: '/pages/records/records' })
 
 const list = ref([])
 

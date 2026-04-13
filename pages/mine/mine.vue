@@ -35,6 +35,10 @@
 </template>
 
 <script setup>
+import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+
+useMpWeixinShare({ path: '/pages/mine/mine' })
+
 function goRecords() {
 	uni.switchTab({ url: '/pages/records/records' })
 }

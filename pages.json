@@ -11,56 +11,72 @@
 			"style": {
 				"navigationBarTitleText": "素盒六爻卜卦",
 				"navigationStyle": "default",
-				"backgroundColor": "#faf7f0"
+				"backgroundColor": "#faf7f0",
+				"enableShareAppMessage": true,
+				"enableShareTimeline": true
 			}
 		},
 		{
 			"path": "pages/gua-list/gua-list",
 			"style": {
 				"navigationBarTitleText": "六十四卦",
-				"backgroundColor": "#faf7f0"
+				"backgroundColor": "#faf7f0",
+				"enableShareAppMessage": true,
+				"enableShareTimeline": true
 			}
 		},
 		{
 			"path": "pages/gua-detail/gua-detail",
 			"style": {
 				"navigationBarTitleText": "卦象解读",
-				"backgroundColor": "#faf7f0"
+				"backgroundColor": "#faf7f0",
+				"enableShareAppMessage": true,
+				"enableShareTimeline": true
 			}
 		},
 		{
 			"path": "pages/shake/shake",
 			"style": {
 				"navigationBarTitleText": "摇卦",
-				"backgroundColor": "#faf7f0"
+				"backgroundColor": "#faf7f0",
+				"enableShareAppMessage": true,
+				"enableShareTimeline": true
 			}
 		},
 		{
 			"path": "pages/result/result",
 			"style": {
 				"navigationBarTitleText": "卦象参考",
-				"backgroundColor": "#faf7f0"
+				"backgroundColor": "#faf7f0",
+				"enableShareAppMessage": true,
+				"enableShareTimeline": true
 			}
 		},
 		{
 			"path": "pages/records/records",
 			"style": {
 				"navigationBarTitleText": "卦象记录",
-				"backgroundColor": "#faf7f0"
+				"backgroundColor": "#faf7f0",
+				"enableShareAppMessage": true,
+				"enableShareTimeline": true
 			}
 		},
 		{
 			"path": "pages/mine/mine",
 			"style": {
 				"navigationBarTitleText": "我的",
-				"backgroundColor": "#faf7f0"
+				"backgroundColor": "#faf7f0",
+				"enableShareAppMessage": true,
+				"enableShareTimeline": true
 			}
 		},
 		{
 			"path": "pages/privacy/privacy",
 			"style": {
 				"navigationBarTitleText": "隐私说明",
-				"backgroundColor": "#faf7f0"
+				"backgroundColor": "#faf7f0",
+				"enableShareAppMessage": true,
+				"enableShareTimeline": true
 			}
 		}
 	],
