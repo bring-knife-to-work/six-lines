@@ -9,11 +9,13 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "素盒六爻卜卦",
+				"navigationBarTitleText": "小万素盒易学研习",
 				"navigationStyle": "default",
 				"backgroundColor": "#faf7f0",
-				"enableShareAppMessage": true,
-				"enableShareTimeline": true
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
 			}
 		},
 		{
@@ -21,8 +23,10 @@
 			"style": {
 				"navigationBarTitleText": "六十四卦",
 				"backgroundColor": "#faf7f0",
-				"enableShareAppMessage": true,
-				"enableShareTimeline": true
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
 			}
 		},
 		{
@@ -30,8 +34,10 @@
 			"style": {
 				"navigationBarTitleText": "卦象解读",
 				"backgroundColor": "#faf7f0",
-				"enableShareAppMessage": true,
-				"enableShareTimeline": true
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
 			}
 		},
 		{
@@ -39,8 +45,10 @@
 			"style": {
 				"navigationBarTitleText": "摇卦",
 				"backgroundColor": "#faf7f0",
-				"enableShareAppMessage": true,
-				"enableShareTimeline": true
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
 			}
 		},
 		{
@@ -48,26 +56,54 @@
 			"style": {
 				"navigationBarTitleText": "卦象参考",
 				"backgroundColor": "#faf7f0",
-				"enableShareAppMessage": true,
-				"enableShareTimeline": true
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
 			}
 		},
 		{
 			"path": "pages/records/records",
 			"style": {
-				"navigationBarTitleText": "卦象记录",
+				"navigationBarTitleText": "我的记录",
 				"backgroundColor": "#faf7f0",
-				"enableShareAppMessage": true,
-				"enableShareTimeline": true
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
+			}
+		},
+		{
+			"path": "pages/tools/tools",
+			"style": {
+				"navigationBarTitleText": "易学工具集",
+				"backgroundColor": "#faf7f0",
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
+			}
+		},
+		{
+			"path": "pages/tool-workbench/tool-workbench",
+			"style": {
+				"navigationBarTitleText": "研习工具",
+				"backgroundColor": "#faf7f0",
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
 			}
 		},
 		{
 			"path": "pages/mine/mine",
 			"style": {
-				"navigationBarTitleText": "我的",
+				"navigationBarTitleText": "关于",
 				"backgroundColor": "#faf7f0",
-				"enableShareAppMessage": true,
-				"enableShareTimeline": true
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
 			}
 		},
 		{
@@ -75,8 +111,10 @@
 			"style": {
 				"navigationBarTitleText": "隐私说明",
 				"backgroundColor": "#faf7f0",
-				"enableShareAppMessage": true,
-				"enableShareTimeline": true
+				"mp-weixin": {
+					"enableShareAppMessage": true,
+					"enableShareTimeline": true
+				}
 			}
 		}
 	],
@@ -88,19 +126,25 @@
 		"list": [
 			{
 				"pagePath": "pages/index/index",
-				"text": "素盒",
+				"text": "首页",
 				"iconPath": "static/tab/home.png",
 				"selectedIconPath": "static/tab/home-active.png"
 			},
 			{
+				"pagePath": "pages/tools/tools",
+				"text": "工具集",
+				"iconPath": "static/tab/records.png",
+				"selectedIconPath": "static/tab/records-active.png"
+			},
+			{
 				"pagePath": "pages/records/records",
-				"text": "记录",
+				"text": "我的记录",
 				"iconPath": "static/tab/records.png",
 				"selectedIconPath": "static/tab/records-active.png"
 			},
 			{
 				"pagePath": "pages/mine/mine",
-				"text": "我的",
+				"text": "关于",
 				"iconPath": "static/tab/mine.png",
 				"selectedIconPath": "static/tab/mine-active.png"
 			}
@@ -108,7 +152,7 @@
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "素盒六爻",
+		"navigationBarTitleText": "小万素盒易学研习",
 		"navigationBarBackgroundColor": "#fff8ee",
 		"backgroundColor": "#faf7f0",
 		"backgroundTextStyle": "dark"

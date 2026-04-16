@@ -2,16 +2,16 @@
  * 应用文案与开关（上架合规）
  * 广告：仅预留位，默认关闭，不展示、不加载
  */
-export const APP_NAME = '素盒六爻卜卦'
-export const APP_SHORT_NAME = '素盒六爻'
+export const APP_NAME = '小万素盒易学研习'
+export const APP_SHORT_NAME = '易学研习'
 
 /** 全局合规结语（各页可复用） */
 export const FOOTER_HINT =
-	'本工具为传统文化趣味参考，不构成任何现实指导。仅供民俗文化娱乐参考。'
+	'本工具仅为民俗文化学习参考，无预测、咨询服务，不构成任何决策建议。'
 
 /** 首页专用：工具定位一行说清（勿在首页重复堆叠长合规段） */
 export const HOME_TOOL_ONE_LINE =
-	'民俗文化趣味参考，仅供娱乐；本工具不构成现实指导。'
+	'民俗文化学习参考与记录工具，不提供预测或咨询服务。'
 
 /** @deprecated 与 HOME_TOOL_ONE_LINE 合并使用，避免重复 */
 export const HOME_SUBTITLE = '民俗文化趣味参考，仅供娱乐'

@@ -56,16 +56,14 @@
 <script setup>
 import { ref } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
-import { APP_NAME } from '@/config/app.js'
 import { loadSession, addRecord, getRecordById } from '@/utils/storage.js'
 import { HEXAGRAM_NAMES, getHexagramCopy } from '@/data/hexagram-data.js'
 import { buildSession } from '@/utils/i-ching.js'
-import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+import { usePageShare } from '@/utils/share-mp.js'
 
+usePageShare({ title: '小万素盒易学研习 · 卦象参考', path: '/pages/result/result' })
 const session = ref(null)
 const saved = ref(false)
-/** 用于分享带 recordId 的链接（从记录进入或保存后） */
-const shareLinkRecordId = ref('')
 
 const mainName = ref('')
 const changedName = ref('')
@@ -95,7 +93,6 @@ function applyFromRecord(rec) {
 		themeName: rec.themeName,
 	}
 	saved.value = true
-	shareLinkRecordId.value = String(rec.id || '')
 	mainName.value = HEXAGRAM_NAMES[session.value.kingWenId] || rec.mainName || ''
 	changedName.value =
 		session.value.changedKwId != null
@@ -112,7 +109,6 @@ function applyFromLoadedSession(s) {
 	session.value = s
 	if (!s) {
 		saved.value = false
-		shareLinkRecordId.value = ''
 		mainName.value = ''
 		changedName.value = ''
 		copy.value = null
@@ -120,7 +116,6 @@ function applyFromLoadedSession(s) {
 	}
 	if (prevTs !== s.ts) {
 		saved.value = false
-		shareLinkRecordId.value = ''
 	}
 	mainName.value = HEXAGRAM_NAMES[s.kingWenId] || ''
 	changedName.value =
@@ -143,7 +138,6 @@ function hydrate() {
 		}
 		session.value = null
 		saved.value = false
-		shareLinkRecordId.value = ''
 		mainName.value = ''
 		changedName.value = ''
 		copy.value = null
@@ -170,31 +164,6 @@ function hydrate() {
 	applyFromLoadedSession(s)
 }
 
-useMpWeixinShare({
-	path: '/pages/result/result',
-	getAppMessage() {
-		const rid = shareLinkRecordId.value
-		const t = mainName.value
-		const title = t ? `${t} · ${APP_NAME}` : APP_NAME
-		if (rid) {
-			return {
-				title,
-				path: `/pages/result/result?recordId=${encodeURIComponent(rid)}`,
-			}
-		}
-		return { title, path: '/pages/index/index' }
-	},
-	getTimeline() {
-		const rid = shareLinkRecordId.value
-		const t = mainName.value
-		const title = t ? `${t} · ${APP_NAME}` : APP_NAME
-		if (rid) {
-			return { title, query: `recordId=${encodeURIComponent(rid)}` }
-		}
-		return { title, query: '' }
-	},
-})
-
 onShow(() => {
 	hydrate()
 })
@@ -215,7 +184,6 @@ function save() {
 		themeName: s.themeName,
 	})
 	saved.value = true
-	shareLinkRecordId.value = id
 	uni.showToast({ title: '已保存', icon: 'success' })
 }
 

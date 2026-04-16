@@ -28,39 +28,17 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
-import { APP_NAME } from '@/config/app.js'
 import { HEXAGRAM_NAMES, getHexagramCopy } from '@/data/hexagram-data.js'
-import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+import { usePageShare } from '@/utils/share-mp.js'
 
 const kid = ref(0)
 const copy = ref(null)
+usePageShare({ title: '小万素盒易学研习 · 卦象解读', path: '/pages/gua-detail/gua-detail' })
 
 const name = computed(() => (kid.value > 0 ? HEXAGRAM_NAMES[kid.value] || '' : ''))
 const glyph = computed(() =>
 	kid.value > 0 ? String.fromCodePoint(0x4dc0 + (kid.value - 1)) : '',
 )
-
-useMpWeixinShare({
-	getAppMessage() {
-		const k = kid.value
-		const t = name.value
-		return {
-			title: t ? `${t} · ${APP_NAME}` : APP_NAME,
-			path:
-				k >= 1 && k <= 64
-					? `/pages/gua-detail/gua-detail?id=${k}`
-					: '/pages/gua-list/gua-list',
-		}
-	},
-	getTimeline() {
-		const k = kid.value
-		const t = name.value
-		return {
-			title: t ? `${t} · ${APP_NAME}` : APP_NAME,
-			query: k >= 1 && k <= 64 ? `id=${k}` : '',
-		}
-	},
-})
 
 onLoad((q) => {
 	const n = parseInt(q.id, 10)

@@ -14,9 +14,10 @@
 				<view class="row__main">
 					<text class="row__t">{{ fmt(item.ts) }}</text>
 					<text v-if="item.themeName" class="row__tag">{{ item.themeName }}</text>
-					<text class="row__n">{{ item.mainName }}</text>
+					<text class="row__n">{{ itemTitle(item) }}</text>
 					<text v-if="mne(item)" class="row__k">{{ mne(item) }}</text>
 					<text class="row__s" v-if="item.changedName">变：{{ item.changedName }}</text>
+					<text class="row__s" v-if="item.recordType === 'study' && item.lines && item.lines[0]">{{ item.lines[0] }}</text>
 				</view>
 				<text class="row__x" @click.stop="remove(item.id)">删除</text>
 			</view>
@@ -37,13 +38,14 @@ import { ref } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
 import { loadRecords, removeRecord, clearAllRecords } from '@/utils/storage.js'
 import { getHexagramMnemonic } from '@/data/hexagram-data.js'
-import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+import { usePageShare } from '@/utils/share-mp.js'
 
-useMpWeixinShare({ path: '/pages/records/records' })
+usePageShare({ title: '我的记录 · 小万素盒易学研习', path: '/pages/records/records' })
 
 const list = ref([])
 
 function mne(item) {
+	if (item && item.recordType === 'study') return ''
 	const id = item && item.kingWenId
 	return id ? getHexagramMnemonic(id) : ''
 }
@@ -54,10 +56,24 @@ function refresh() {
 
 function openDetail(item) {
 	if (!item || !item.id) return
+	if (item.recordType === 'study') {
+		uni.showModal({
+			title: item.toolName || '工具记录',
+			content: (item.lines || []).join('\n'),
+			showCancel: false,
+		})
+		return
+	}
 	uni.navigateTo({
 		url:
 			'/pages/result/result?recordId=' + encodeURIComponent(String(item.id)),
 	})
+}
+
+function itemTitle(item) {
+	if (!item) return '未命名记录'
+	if (item.recordType === 'study') return item.title || item.toolName || '工具记录'
+	return item.mainName || '卦象记录'
 }
 
 onShow(() => {

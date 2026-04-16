@@ -1,7 +1,7 @@
 <template>
 	<view class="page-bg page-pad page-pad--tab">
 		<view class="hero card-surface">
-			<text class="hero__title">素盒六爻卜卦</text>
+			<text class="hero__title">小万素盒易学研习</text>
 			<text class="hero__note">{{ toolOneLine }}</text>
 		</view>
 
@@ -9,6 +9,14 @@
 			<view class="gua__l">
 				<text class="gua__t">六十四卦与解读</text>
 				<text class="gua__d">查看全部卦名、卦象符号与固定方向解读</text>
+			</view>
+			<text class="gua__a">进入</text>
+		</view>
+
+		<view class="gua card-surface" @click="goTools" hover-class="u-hover">
+			<view class="gua__l">
+				<text class="gua__t">易学工具集</text>
+				<text class="gua__d">梅花易数、八字排盘、干支历法、生肖研习、姓名解析</text>
 			</view>
 			<text class="gua__a">进入</text>
 		</view>
@@ -38,7 +46,7 @@
 			</view>
 		</view>
 
-		<view class="cta card-surface">
+		<view id="shake-cta" class="cta card-surface">
 			<button class="cta__btn" hover-class="u-hover" type="default" @click="goShake">
 				开始摇卦
 			</button>
@@ -50,12 +58,13 @@
 
 <script setup>
 import { ref } from 'vue'
+import { onShow } from '@dcloudio/uni-app'
 import { HOME_TOOL_ONE_LINE } from '@/config/app.js'
 import { SHAKE_THEMES } from '@/config/shake-themes.js'
 import { getStoredThemeId, setStoredThemeId } from '@/utils/shake-theme.js'
-import { useMpWeixinShare } from '@/utils/mp-weixin-share.js'
+import { usePageShare } from '@/utils/share-mp.js'
 
-useMpWeixinShare({ path: '/pages/index/index' })
+usePageShare({ title: '小万素盒易学研习', path: '/pages/index/index' })
 
 const toolOneLine = HOME_TOOL_ONE_LINE
 const themes = SHAKE_THEMES
@@ -73,6 +82,29 @@ function goShake() {
 function goGuaList() {
 	uni.navigateTo({ url: '/pages/gua-list/gua-list' })
 }
+
+function goTools() {
+	uni.switchTab({ url: '/pages/tools/tools' })
+}
+
+onShow(() => {
+	let focusShake = ''
+	try {
+		focusShake = uni.getStorageSync('sixlines_focus_shake_v1')
+	} catch (e) {
+		focusShake = ''
+	}
+	if (!focusShake) return
+	try {
+		uni.removeStorageSync('sixlines_focus_shake_v1')
+	} catch (e) {}
+	setTimeout(() => {
+		uni.pageScrollTo({
+			selector: '#shake-cta',
+			duration: 280,
+		})
+	}, 80)
+})
 </script>
 
 <style scoped>
