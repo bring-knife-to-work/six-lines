@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "卦象参考",
+  "backgroundColor": "#faf7f0",
+  "enableShareAppMessage": true,
+  "enableShareTimeline": true,
+  "usingComponents": {
+    "hexagram-lines": "../../components/hexagram-lines/hexagram-lines",
+    "result-copy-card": "../../components/result-copy-card/result-copy-card",
+    "ad-slot": "../../components/ad-slot/ad-slot",
+    "compliance-footer": "../../components/compliance-footer/compliance-footer"
+  }
+}

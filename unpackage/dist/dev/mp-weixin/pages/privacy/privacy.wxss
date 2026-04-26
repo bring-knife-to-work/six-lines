@@ -1,0 +1,23 @@
+
+.page-pad.data-v-33d54784 {
+	padding: 26rpx 26rpx 44rpx;
+	box-sizing: border-box;
+}
+.block.data-v-33d54784 {
+	padding: 22rpx 18rpx;
+	margin-bottom: 16rpx;
+}
+.h.data-v-33d54784 {
+	font-size: 34rpx;
+	font-weight: 900;
+	color: #2b241c;
+	display: block;
+	margin-bottom: 12rpx;
+}
+.p.data-v-33d54784 {
+	font-size: 28rpx;
+	color: #3a3228;
+	line-height: 1.85;
+	display: block;
+	white-space: pre-wrap;
+}

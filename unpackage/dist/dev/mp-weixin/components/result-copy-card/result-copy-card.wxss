@@ -1,0 +1,28 @@
+
+.card.data-v-c4475be1 {
+	margin-top: 16rpx;
+	padding: 22rpx 20rpx;
+}
+.card__lead.data-v-c4475be1 {
+	display: block;
+	font-size: 26rpx;
+	font-weight: 700;
+	color: #6b4e2e;
+	margin-bottom: 14rpx;
+	padding-bottom: 12rpx;
+	border-bottom: 1rpx solid rgba(107, 78, 46, 0.12);
+}
+.card__p.data-v-c4475be1 {
+	display: block;
+	font-size: 28rpx;
+	color: #3a3228;
+	line-height: 1.75;
+	margin-bottom: 12rpx;
+}
+.card__p--ref.data-v-c4475be1 {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+.muted.data-v-c4475be1 {
+	color: #8a7a66;
+}

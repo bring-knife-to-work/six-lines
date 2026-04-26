@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "卦象解读",
+  "backgroundColor": "#faf7f0",
+  "enableShareAppMessage": true,
+  "enableShareTimeline": true,
+  "usingComponents": {
+    "result-copy-card": "../../components/result-copy-card/result-copy-card",
+    "compliance-footer": "../../components/compliance-footer/compliance-footer"
+  }
+}

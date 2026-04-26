@@ -1,7 +1,5 @@
 # 依赖与构建产物
 node_modules/
-unpackage/dist/
-unpackage/cache/
 
 # 日志与本地配置
 *.log

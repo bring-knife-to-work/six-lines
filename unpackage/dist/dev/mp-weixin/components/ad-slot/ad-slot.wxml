@@ -1,0 +1,1 @@
+<view wx:if="{{a}}" class="{{['ad-slot', 'data-v-f851a00e', f]}}" style="{{g}}"><ad wx:if="{{b}}" class="ad-slot__native data-v-f851a00e" unit-id="{{c}}" bindload="{{d}}" binderror="{{e}}"/></view>

@@ -1,0 +1,55 @@
+
+.hx.data-v-1aa34c87 {
+	align-items: center;
+}
+.hx__glyph.data-v-1aa34c87 {
+	font-size: 120rpx;
+	line-height: 1.2;
+	color: #6b4e2e;
+	text-align: center;
+	display: block;
+	margin-bottom: 24rpx;
+}
+.hx__stack.data-v-1aa34c87 {
+	width: 100%;
+}
+.hx__line.data-v-1aa34c87 {
+	display: flex;
+	align-items: center;
+	margin-bottom: 18rpx;
+}
+.hx__pos.data-v-1aa34c87 {
+	width: 88rpx;
+	font-size: 22rpx;
+	color: #8a7a66;
+}
+.hx__bar.data-v-1aa34c87 {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+.hx__yang.data-v-1aa34c87 {
+	height: 12rpx;
+	background: #6b4e2e;
+	border-radius: 4rpx;
+	flex: 1;
+}
+.hx__yin.data-v-1aa34c87 {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+.hx__seg.data-v-1aa34c87 {
+	height: 12rpx;
+	background: #6b4e2e;
+	border-radius: 4rpx;
+	flex: 1;
+}
+.hx__gap.data-v-1aa34c87 {
+	width: 40rpx;
+}
+.hx__mv.data-v-1aa34c87 {
+	margin-left: 16rpx;
+	font-size: 22rpx;
+	color: #b8860b;
+}

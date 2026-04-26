@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),t=require("../../config/app.js"),o={__name:"compliance-footer",props:{text:{type:String,default:t.FOOTER_HINT}},setup:t=>(o,r)=>({a:e.t(t.text)})},r=e._export_sfc(o,[["__scopeId","data-v-c28afbf1"]]);wx.createComponent(r);

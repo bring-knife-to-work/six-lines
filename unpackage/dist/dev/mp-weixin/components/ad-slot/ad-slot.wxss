@@ -1,0 +1,9 @@
+
+.ad-slot.data-v-f851a00e {
+	width: 100%;
+	box-sizing: border-box;
+}
+.ad-slot__native.data-v-f851a00e {
+	width: 100%;
+	display: block;
+}

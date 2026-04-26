@@ -1,0 +1,1 @@
+<view wx:if="{{a}}" class="card card-surface data-v-c4475be1"><text class="card__lead data-v-c4475be1">{{b}}</text><text class="card__p card__p--ref data-v-c4475be1">{{c}}</text><text wx:if="{{d}}" class="card__p muted data-v-c4475be1">{{e}}</text></view>
