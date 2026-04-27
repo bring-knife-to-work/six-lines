@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "研习工具",
-  "backgroundColor": "#faf7f0",
-  "enableShareAppMessage": true,
-  "enableShareTimeline": true,
-  "usingComponents": {
-    "compliance-footer": "../../components/compliance-footer/compliance-footer"
-  }
-}

@@ -1,1 +1,0 @@
-"use strict";exports.resolveStatic=function(t){if(!t||"string"!=typeof t)return"";const s=t.trim();return s.startsWith("@static/")?"/"+s.replace(/^@static\//,"static/"):s.startsWith("/static/")?s:s.startsWith("static/")?"/"+s:s};

@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "易学工具集",
-  "backgroundColor": "#faf7f0",
-  "enableShareAppMessage": true,
-  "enableShareTimeline": true,
-  "usingComponents": {
-    "compliance-footer": "../../components/compliance-footer/compliance-footer"
-  }
-}
